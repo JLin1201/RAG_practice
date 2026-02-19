@@ -37,6 +37,9 @@ Tested on a local GPU environment simulating edge constraints:
 * **TPS (Tokens Per Second)**: `~39 t/s`. Smooth streaming generation experience.
 
 ### Qualitative Analysis (Benchmark)
-* **Data Parsing & Retrieval**: The manual pure Numpy cosine similarity accurately retrieves and differentiates specific structural specs (e.g., successfully distinguishing between Left and Right I/O ports of the AORUS MASTER 16).
-* **Bilingual Capability**: The system successfully understands Traditional Chinese queries (e.g., "電池容量與變壓器瓦數") and matches them with English spec sheets (e.g., "99Wh" and "240W").
-* **Generation Quality**: Responses are streamed directly from the retrieved context, successfully preventing hallucinations regarding hardware specifications.
+* **Complex Data Parsing & Anti-Hallucination**: The knowledge base was strategically structured into "Common Specs" and "Model Specific" tiers to handle the AM6H series' internal GPU variants (BZH, BYH, BXH). The manual Numpy cosine similarity successfully differentiates between these variants without cross-contaminating specifications.
+  * **Test Query:** "請問頂規的 BZH 和入門的 BXH，這兩款的顯示卡 (GPU) 分別是配哪一張？它們的 Maximum Graphics Power 是一樣的嗎？"
+  * **System Response:** "頂規的 BZH (RTX 5090) 和入門的 BXH (RTX 5070 Ti) 的 GPU 分別是配 RTX 5090 和 RTX 5070 Ti。兩者的 Maximum Graphics Power 是不同的，BZH 是 175W，而 BXH 是 140W。"
+  * **Result:** Perfect extraction and differentiation under 4GB VRAM constraint.
+* **Precision Retrieval**: Accurately retrieves and differentiates spatial hardware details (e.g., distinguishing between Left and Right I/O ports, including Thunderbolt 4 vs 5 placements).
+* **Bilingual Capability**: The multilingual embedding effectively maps Traditional Chinese queries to the English spec sheet.
