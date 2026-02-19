@@ -1,4 +1,4 @@
-# GIGABYTE AI Hardware Assistant (Pure Python RAG)
+# AI Hardware Assistant (Pure Python RAG)
 
 This repository contains a lightweight RAG system designed for resource-constrained environments (Consumer Laptop, <4GB VRAM). It strictly follows the "No Frameworks" policy, implementing chunking, retrieval, and generation using pure Python, `numpy`, and `llama.cpp`.
 
