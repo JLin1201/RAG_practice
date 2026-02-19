@@ -21,7 +21,7 @@ class SimpleRAG:
     def generate_stream(self, query: str) -> Generator[str, None, None]:
         context = "\n".join([f"- {c}" for c in self.retrieve(query)])
         messages = [
-            {"role": "system", "content": "You are a GIGABYTE AI assistant. Use context strictly to answer the user's question."},
+            {"role": "system", "content": "You are a AI assistant. Use context strictly to answer the user's question."},
             {"role": "user", "content": f"Context:\n{context}\n\nQuestion: {query}\nAnswer:"}
         ]
         
