@@ -1,17 +1,13 @@
-Product Name: GIGABYTE AORUS 16X (2024 Model: AM6H)
-Processor (CPU): Intel® Core™ i9-14900HX Processor (36M Cache, up to 5.8 GHz, 24 cores: 8 P-cores and 16 E-cores).
-Graphics (GPU): NVIDIA® GeForce RTX™ 4070 Laptop GPU 8GB GDDR6. Boost Clock 2175MHz / Maximum Graphics Power 140W.
-Display: 16.0" 16:10 WQXGA (2560x1600) 165Hz Display (100% sRGB, TÜV Rheinland-certified, Pantone Validated).
-Memory (RAM): 2x DDR5 Slots (DDR5-5600MHz), Max capacity 64GB.
-Storage: 2x M.2 SSD slots (Supports NVMe PCIe Gen4).
-Keyboard: 3-Zone RGB Backlit Keyboard, Per-Key Macro support.
-Ports (I/O):
-- Left Side: 1x RJ-45, 1x HDMI 2.1, 1x USB 3.2 Gen2 (Type-A), 1x USB 3.2 Gen2 (Type-C / DP / PD 3.0).
-- Right Side: 1x DC-in, 1x USB 3.2 Gen2 (Type-C / Thunderbolt™ 4), 1x MicroSD Card Reader, 1x Audio Combo Jack.
-Audio: 2x 2W Speaker, Microphone, Dolby Atmos Technology.
-Network: Wi-Fi 7 (802.11be), Bluetooth V5.4, 1Gbps Ethernet.
-Battery: Li-Polymer 99Wh.
-Adapter: 240W AC Adapter.
-Dimensions: 35.6(W) x 25.4(D) x 2.0~2.7(H) cm.
-Weight: ~2.3 kg.
-AI Features: GIGABYTE AI Nexus (AI Power Gear, AI Boost, AI Generator).
+[Series: GIGABYTE AORUS MASTER 16 AM6H] The AM6H series includes three variants based on GPU: BZH (RTX 5090), BYH (RTX 5080), and BXH (RTX 5070 Ti).
+[Series: GIGABYTE AORUS MASTER 16 AM6H Common Specs] CPU: Intel Core Ultra 9 Processor 275HX (36MB cache, up to 5.4 GHz, 24 cores, 24 threads).
+[Series: GIGABYTE AORUS MASTER 16 AM6H Common Specs] Display: 16" 16:10 OLED WQXGA (2560x1600) 240Hz, 1ms, DCIP-3 100%, 500nits (peak).
+[Series: GIGABYTE AORUS MASTER 16 AM6H Common Specs] Memory: Up to 64GB DDR5 5600MHz (2x SO-DIMM sockets for expansion).
+[Series: GIGABYTE AORUS MASTER 16 AM6H Common Specs] Storage: 1x PCIe Gen5 M.2 slot and 1x PCIe Gen4x4 M.2 slots (Up to 4TB PCIe NVMe M.2 SSD).
+[Series: GIGABYTE AORUS MASTER 16 AM6H Common Specs] Ports Left: 1 x DC in, 1 x RJ-45, 1 x HDMI 2.1, 1 x Type-A USB3.2 Gen2, 1 x Type-C with Thunderbolt 5.
+[Series: GIGABYTE AORUS MASTER 16 AM6H Common Specs] Ports Right: 1 x Type-A USB3.2 Gen2, 1 x Type-C with Thunderbolt 4, 1 x MicroSD (UHS-II), 1 x Audio Jack combo.
+[Series: GIGABYTE AORUS MASTER 16 AM6H Common Specs] Battery and Power: Li Polymer 99Wh battery, 330W AC Adapter.
+[Series: GIGABYTE AORUS MASTER 16 AM6H Common Specs] Network and Audio: WIFI 7 (802.11be 2x2), Bluetooth v5.4, 4x 2W speakers, Dolby Atmos Smart Amp.
+[Series: GIGABYTE AORUS MASTER 16 AM6H Common Specs] Physical: Dimensions 357 x 254 x 23~29.9 mm, Weight ~2.5 kg, Color Dark Tide.
+[Model Specific: AORUS MASTER 16 BZH] GPU: NVIDIA GeForce RTX 5090 Laptop GPU 24GB GDDR7, 175W Maximum Graphics Power, AI Boost 1797 MHz.
+[Model Specific: AORUS MASTER 16 BYH] GPU: NVIDIA GeForce RTX 5080 Laptop GPU 16GB GDDR7, 175W Maximum Graphics Power, AI Boost 1902 MHz.
+[Model Specific: AORUS MASTER 16 BXH] GPU: NVIDIA GeForce RTX 5070 Ti Laptop GPU 12GB GDDR7, 140W Maximum Graphics Power, AI Boost 1962 MHz.
