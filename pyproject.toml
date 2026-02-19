@@ -1,7 +1,7 @@
 [project]
-name = "gigabyte-rag"
+name = "edge-rag-assistant"
 version = "0.1.0"
-description = "Pure Python RAG implementation for Gigabyte interview task"
+description = "Pure Python RAG implementation for edge devices with VRAM constraints"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
