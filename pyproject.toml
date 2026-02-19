@@ -1,0 +1,11 @@
+[project]
+name = "gigabyte-rag"
+version = "0.1.0"
+description = "Pure Python RAG implementation for Gigabyte interview task"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "llama-cpp-python>=0.2.77",
+    "numpy>=1.26.0",
+    "sentence-transformers>=3.0.0"
+]

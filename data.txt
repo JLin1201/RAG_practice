@@ -1,0 +1,17 @@
+Product Name: GIGABYTE AORUS 16X (2024 Model: AM6H)
+Processor (CPU): Intel® Core™ i9-14900HX Processor (36M Cache, up to 5.8 GHz, 24 cores: 8 P-cores and 16 E-cores).
+Graphics (GPU): NVIDIA® GeForce RTX™ 4070 Laptop GPU 8GB GDDR6. Boost Clock 2175MHz / Maximum Graphics Power 140W.
+Display: 16.0" 16:10 WQXGA (2560x1600) 165Hz Display (100% sRGB, TÜV Rheinland-certified, Pantone Validated).
+Memory (RAM): 2x DDR5 Slots (DDR5-5600MHz), Max capacity 64GB.
+Storage: 2x M.2 SSD slots (Supports NVMe PCIe Gen4).
+Keyboard: 3-Zone RGB Backlit Keyboard, Per-Key Macro support.
+Ports (I/O):
+- Left Side: 1x RJ-45, 1x HDMI 2.1, 1x USB 3.2 Gen2 (Type-A), 1x USB 3.2 Gen2 (Type-C / DP / PD 3.0).
+- Right Side: 1x DC-in, 1x USB 3.2 Gen2 (Type-C / Thunderbolt™ 4), 1x MicroSD Card Reader, 1x Audio Combo Jack.
+Audio: 2x 2W Speaker, Microphone, Dolby Atmos Technology.
+Network: Wi-Fi 7 (802.11be), Bluetooth V5.4, 1Gbps Ethernet.
+Battery: Li-Polymer 99Wh.
+Adapter: 240W AC Adapter.
+Dimensions: 35.6(W) x 25.4(D) x 2.0~2.7(H) cm.
+Weight: ~2.3 kg.
+AI Features: GIGABYTE AI Nexus (AI Power Gear, AI Boost, AI Generator).
