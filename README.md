@@ -1,15 +1,15 @@
-# Edge AI Hardware Assistant (Pure Python RAG)
+# GIGABYTE AORUS AI Assistant (Pure Python RAG)
 
-This repository contains a lightweight Retrieval-Augmented Generation (RAG) system designed for resource-constrained environments (e.g., Consumer Laptops, <4GB VRAM). It strictly follows a "No Frameworks" approach, implementing chunking, retrieval, and generation using pure Python, `numpy`, and `llama.cpp`.
+This repository contains a lightweight Retrieval-Augmented Generation (RAG) system specifically designed for the **GIGABYTE AORUS MASTER 16 AM6H**. It is built for a resource-constrained consumer laptop environment (<4GB VRAM) and strictly follows the "No Frameworks" policy, implementing chunking, retrieval, and streaming generation using pure Python, `numpy`, and `llama.cpp`.
 
-## 🛠️ Environment Setup
+## 🛠️ Environment Setup (uv)
 
-Managed by `uv` for speed and consistency.
+Managed by `uv` for strict environment control and fast dependency resolution.
 
 ```bash
 # 1. Clone repository
 git clone <repo_url>
-cd edge-rag-assistant
+cd gigabyte-aorus-rag
 
 # 2. Sync dependencies
 uv sync
@@ -20,18 +20,23 @@ uv run python main.py
 
 ## 🧠 Model Selection Strategy (<4GB VRAM Constraint)
 
-* **LLM**: `Qwen2.5-1.5B-Instruct-GGUF (Q4_K_M)` (~1.1GB). Chosen for its excellent Traditional Chinese support and optimal reasoning-to-size ratio.
-* **Embedding**: `paraphrase-multilingual-MiniLM-L12-v2` (~470MB). Selected specifically to handle mixed Traditional Chinese and English queries.
-* **Total VRAM**: Estimated usage is **< 2GB**, leaving ample headroom for the context window and OS overhead, perfectly adhering to edge constraints.
+To strictly adhere to the 4GB VRAM limit while maintaining high-quality bilingual (TC/EN) support:
 
-## 📊 Evaluation Metrics
+* **LLM**: `Qwen2.5-1.5B-Instruct-GGUF (Q4_K_M)` (~1.1GB). 
+  * *Reason*: Qwen series demonstrates superior performance in Traditional Chinese compared to Llama models of similar size. The 4-bit quantization keeps the memory footprint extremely low while retaining sufficient reasoning capability for spec extraction.
+* **Embedding**: `paraphrase-multilingual-MiniLM-L12-v2` (~470MB). 
+  * *Reason*: Selected specifically to handle the mixed Traditional Chinese and English queries effectively.
+* **Total VRAM**: Estimated usage is **< 2GB**, leaving ample headroom for the 2048 context window and OS overhead.
+
+## 📊 System Evaluation (System Evaluation)
 
 Tested on a local GPU environment simulating edge constraints:
 
-* **TTFT (Time To First Token)**: `~0.23s`. Extremely fast prefilling due to the lightweight quantized model.
+### Quantitative Metrics
+* **TTFT (Time To First Token)**: `~0.23s`. Extremely fast prefilling.
 * **TPS (Tokens Per Second)**: `~39 t/s`. Smooth streaming generation experience.
 
-### Qualitative Analysis
-* **Retrieval Accuracy**: The manual pure Numpy cosine similarity accurately retrieves and differentiates specific technical spec chunks (e.g., successfully distinguishing between Left and Right I/O ports on a device).
-* **Bilingual Capability**: Thanks to the multilingual embedding model, the system successfully understands Traditional Chinese queries (e.g., "電池容量與變壓器瓦數") and matches them with English spec sheets (e.g., "99Wh" and "240W") without missing context.
-* **Generation**: The model generates streaming responses strictly based on the provided hardware context without hallucination.
+### Qualitative Analysis (Benchmark)
+* **Data Parsing & Retrieval**: The manual pure Numpy cosine similarity accurately retrieves and differentiates specific structural specs (e.g., successfully distinguishing between Left and Right I/O ports of the AORUS MASTER 16).
+* **Bilingual Capability**: The system successfully understands Traditional Chinese queries (e.g., "電池容量與變壓器瓦數") and matches them with English spec sheets (e.g., "99Wh" and "240W").
+* **Generation Quality**: Responses are streamed directly from the retrieved context, successfully preventing hallucinations regarding hardware specifications.
