@@ -3,7 +3,7 @@ import sys
 from rag_engine import SimpleRAG
 
 def main():
-    print("🚀 啟動 GIGABYTE AI Assistant (4GB VRAM Edition)...")
+    print("🚀 啟動 AI Assistant (4GB VRAM Edition)...")
     
     # 初始化 RAG
     rag = SimpleRAG(
