@@ -52,3 +52,10 @@ Tested on a local GPU environment simulating edge constraints:
   * **Result:** Perfect extraction and differentiation under 4GB VRAM constraint.
 * **Precision Retrieval**: Accurately retrieves and differentiates spatial hardware details (e.g., distinguishing between Left and Right I/O ports, including Thunderbolt 4 vs 5 placements).
 * **Bilingual Capability**: The multilingual embedding effectively maps Traditional Chinese queries to the English spec sheet.
+  
+### Future Work: Advanced RAG Evaluation (LLM-as-a-Judge)
+While current qualitative testing manually verifies anti-hallucination capabilities, scaling this edge RAG system to production would require an automated evaluation pipeline. 
+
+Due to the 4GB VRAM constraint, hosting a capable judge model locally is not feasible for this standalone demo. However, the next step would be implementing a pure-Python **LLM-as-a-Judge pipeline** via API to evaluate:
+* **Context Precision & Recall**: Ensuring the Numpy vector search fetches exact variant specs (e.g., RTX 5080 vs 5090).
+* **Faithfulness (Hallucination Detection)**: Designing a structured scoring rubric (e.g., 0-10 scale) with weighted categories to penalize responses that hallucinate hardware features not present in the retrieved context.
