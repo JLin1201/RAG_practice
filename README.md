@@ -28,6 +28,15 @@ To strictly adhere to the 4GB VRAM limit while maintaining high-quality bilingua
   * *Reason*: Selected specifically to handle the mixed Traditional Chinese and English queries effectively.
 * **Total VRAM**: Estimated usage is **< 2GB**, leaving ample headroom for the 2048 context window and OS overhead.
 
+## ⚙️ RAG Pipeline Implementation (No-Framework Approach)
+
+To strictly adhere to the "No Frameworks" rule and edge device constraints, this system implements a custom, lightweight Dense Retrieval RAG pipeline:
+
+1. **Structured Chunking Strategy**: Instead of arbitrary character-level splitting, the knowledge base (`data.txt`) is pre-processed into structurally meaningful chunks (e.g., `[Common Specs]`, `[Model Specific]`). This guarantees that semantic boundaries are preserved, drastically reducing retrieval noise.
+2. **Dense Vector Retrieval**: Utilizes `SentenceTransformer` to encode queries and documents into dense vectors.
+3. **Pure Numpy Cosine Similarity**: Replaced heavy vector databases (like ChromaDB/FAISS) with a pure `numpy` exact nearest-neighbor (KNN) search. This ensures O(N) retrieval complexity with virtually zero memory overhead, perfect for edge environments.
+4. **Context-Augmented Streaming Generation**: The retrieved Top-K chunks are injected into a highly constrained system prompt, guiding the `llama-cpp-python` engine to generate streaming responses (enhancing TTFT UX) while strictly grounding answers to the provided context.
+
 ## 📊 System Evaluation (System Evaluation)
 
 Tested on a local GPU environment simulating edge constraints:
